@@ -5,7 +5,7 @@
 <div class="banner">
 	<div class="content">
         <h2>HI SYA! HOW WAS SLEEP?!</h2>
-		<div class="call-to-action" on:click={() => showSurprise = true}>Click to kiss metty</div>
+		<a class="call-to-action" on:click={() => showSurprise = true} href="#Contact">Click to kiss metty</a>
         <div class:hidden={!showSurprise}>
             <p>Metty was kissed successfully.</p>
             <p>Now, the funny part, I don't know that you actually clicked this, I didn't wanna code some weird thing that would tell me. Too much work</p>
@@ -53,6 +53,7 @@
 				margin-top: 20px;
 				text-decoration: none;
 				transition: all 0.3s ease-in-out;
+                cursor: pointer;
 
 				&:hover {
 					background-color: #005a64;
