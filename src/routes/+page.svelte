@@ -6,7 +6,7 @@
 	<div class="content">
         <h2>HI SYA! HOW WAS SLEEP?!</h2>
 		<div class="call-to-action" on:click={() => showSurprise = true}>Click to kiss metty</div>
-        <div>
+        <div class:hidden={!showSurprise}>
             <p>Metty was kissed successfully.</p>
             <p>Now, the funny part, I don't know that you actually clicked this, I didn't wanna code some weird thing that would tell me. Too much work</p>
             <p>So you can either tell me or not. Now of course you just thought "never" and that just makes you cute.</p>
