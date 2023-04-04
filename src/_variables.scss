@@ -1,0 +1,59 @@
+@use "sass:math";
+
+// Base Colors
+$dark-navy: #1a1a3e;
+$teal: #4ecdc4;
+$pastel-blue: #a3dff7;
+$purple: #8a60c0;
+$off-white: #f8f8f8;
+
+// Color Palette
+$primary-color: $dark-navy;
+$accent-color: $teal;
+$secondary-color: $pastel-blue;
+$highlight-color: $purple;
+$text-color: $off-white;
+
+// Color Variations
+$primary-color-hover: lighten($primary-color, 10%);
+$primary-color-clicked: darken($primary-color, 10%);
+$accent-color-hover: lighten($accent-color, 10%);
+$accent-color-clicked: darken($accent-color, 10%);
+$secondary-color-hover: lighten($secondary-color, 10%);
+$secondary-color-clicked: darken($secondary-color, 10%);
+$highlight-color-hover: lighten($highlight-color, 10%);
+$highlight-color-clicked: darken($highlight-color, 10%);
+$text-color-hover: lighten($text-color, 10%);
+$text-color-clicked: darken($text-color, 10%);
+
+// Fonts
+$main-font: 'Poppins', 'Roboto', sans-serif;
+$heading-font: 'Montserrat', Arial, sans-serif;
+$subheading-font: 'Raleway', Helvetica, sans-serif;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 769px;
+
+// Mixins
+@mixin mobile {
+	@media (max-width: #{$breakpoint-mobile}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$breakpoint-desktop}) {
+		@content;
+	}
+}
+
+@function rem($px, $base-font-size: 16) {
+	@return math.div($px, $base-font-size) * 1rem;
+}
