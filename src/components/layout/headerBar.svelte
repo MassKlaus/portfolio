@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { bubble } from 'svelte/internal';
-
 	let expandNav = false;
 </script>
 
@@ -9,7 +7,11 @@
 		<img src="images/Massine_Logo_Transparent_header.png" alt="Massine Mouha Logo" />
 	</div>
 	<div class="navigation">
-		<button class="hamburger" class:hamburger--open={expandNav} on:click={() => (expandNav = !expandNav)}>
+		<button
+			class="hamburger"
+			class:hamburger--open={expandNav}
+			on:click={() => (expandNav = !expandNav)}
+		>
 			<span />
 			<span />
 			<span />
@@ -39,6 +41,9 @@
 		padding: rem(10) rem(15);
 		border-bottom: $accent-color rem(2) solid;
 
+		background-color: $primary-color;
+
+		z-index: 200;
 		.logo {
 			background-color: $primary-color;
 			img {
@@ -135,10 +140,19 @@
 					border-radius: rem(5);
 					font-weight: 600;
 
-					&:hover,
-					&:focus {
+					transition: all 100ms;
+
+					&:hover, &:focus {
 						background-color: $primary-color-hover;
+						box-shadow: inset rem(0) rem(0) rem(2) $highlight-color;
+
+						@include mobile {
+							box-shadow: none;
+						}
 					}
+
+
+
 				}
 			}
 		}
