@@ -1,18 +1,9 @@
 <script lang="ts">
-    let showSurprise = false;
 </script>
 
 <div class="banner">
 	<div class="content">
-        <h2>HI SYA! HOW WAS SLEEP?!</h2>
-		<a class="call-to-action" on:click={() => showSurprise = true} href="#Contact">Click to kiss metty</a>
-        <div class:hidden={!showSurprise}>
-            <p>Metty was kissed successfully.</p>
-            <p>Now, the funny part, I don't know that you actually clicked this, I didn't wanna code some weird thing that would tell me. Too much work</p>
-            <p>So you can either tell me or not. Now of course you just thought "never" and that just makes you cute.</p>
-            <p>Also, why the fuck did you wanna kiss me anyways? so much for hating me.</p>
-            <p>Also also, tell me when you actually check the website so I can edit this stuff and work on my portfolio.</p>
-        </div>
+
 	</div>
 </div>
 
