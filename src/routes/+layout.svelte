@@ -3,12 +3,11 @@
 	import HeaderBar from '../components/layout/headerBar.svelte';
 </script>
 
-<HeaderBar/>
+<HeaderBar />
 
 <main>
 	<slot />
 </main>
-
 
 <style scoped>
 </style>

@@ -142,7 +142,8 @@
 
 					transition: all 100ms;
 
-					&:hover, &:focus {
+					&:hover,
+					&:focus {
 						background-color: $primary-color-hover;
 						box-shadow: inset rem(0) rem(0) rem(2) $highlight-color;
 
@@ -150,9 +151,6 @@
 							box-shadow: none;
 						}
 					}
-
-
-
 				}
 			}
 		}

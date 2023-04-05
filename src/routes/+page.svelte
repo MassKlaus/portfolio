@@ -2,13 +2,10 @@
 </script>
 
 <div class="banner">
-	<div class="content">
-
-	</div>
+	<div class="content" />
 </div>
 
 <style lang="scss" scoped>
-    
 	.banner {
 		background-image: url(/images/hero_banner.jpg);
 		background-size: cover;
@@ -33,7 +30,7 @@
 		}
 
 		.content {
-            z-index: 1;
+			z-index: 1;
 			.call-to-action {
 				display: inline-block;
 				background-color: #00707c;
@@ -44,7 +41,7 @@
 				margin-top: 20px;
 				text-decoration: none;
 				transition: all 0.3s ease-in-out;
-                cursor: pointer;
+				cursor: pointer;
 
 				&:hover {
 					background-color: #005a64;
