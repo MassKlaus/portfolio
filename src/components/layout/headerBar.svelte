@@ -118,7 +118,8 @@
 				@include mobile {
 					display: flex;
 					flex-direction: column;
-					align-items: start;
+					align-items: flex-start;
+					color: red;
 					position: absolute;
 					background-color: $primary-color;
 					width: rem(200);
