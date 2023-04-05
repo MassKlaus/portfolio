@@ -2,7 +2,9 @@
 </script>
 
 <div class="banner">
-	<div class="content" />
+	<div class="content">
+		<h2>Grow your [Dynamically Typed Text], Digitally</h2>
+	</div>
 </div>
 
 <style lang="scss" scoped>
