@@ -1,5 +1,25 @@
 <script lang="ts">
 	let expandNav = false;
+
+	let links = [
+		{ text: 'Home', href: '#home', active: false },
+		{ text: 'About Me', href: '#about', active: false },
+		{ text: 'Projects', href: '#projects', active: false },
+		{ text: 'Contact', href: '#contact', active: false }
+	];
+
+	function activateLink(targetIndex: number) {
+		for (let index = 0; index < links.length; index++) {
+			const element = links[index];
+
+			console.log(`ACTIVATE: ${index === targetIndex} ${index}`);
+			
+			
+			element.active = index === targetIndex;
+		}
+
+		links = links;
+	}
 </script>
 
 <header class="header-wrapper">
@@ -18,34 +38,38 @@
 		</button>
 
 		<nav class:show={expandNav}>
-			<a href="#About">About me</a>
-			<a href="#Projects">Projects</a>
-			<a href="#Skills">Skills</a>
-			<a href="#Contact">Contact</a>
+			{#each links as link, i (i)}
+				<a href={link.href} class:active-link={link.active} on:click={() => activateLink(i)}> {link.text}</a>
+			{/each}
 		</nav>
 	</div>
 </header>
 
 <style lang="scss" scoped>
-	$logo-mobile-width: rem(33);
-	$logo-tablet-width: rem(43);
-	$logo-desktop-width: rem(49);
+	$logo-mobile-width: rem(41);
+	$logo-tablet-width: rem(41);
+	$logo-desktop-width: rem(41);
 
+	$nav-header-height: rem(60);
 	.header-wrapper {
 		position: fixed;
 		width: 100%;
+		height: $nav-header-height;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: rem(10) rem(15);
+		padding: rem(8) rem(15);
+
 		border-bottom: $accent-color rem(2) solid;
 
 		background-color: $primary-color;
 
 		z-index: 200;
 		.logo {
-			background-color: $primary-color;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			img {
 				@include mobile {
 					height: $logo-mobile-width;
@@ -70,9 +94,9 @@
 				@include mobile {
 					display: flex;
 					flex-direction: column;
-					gap: rem(9);
+					gap: rem(5);
 					cursor: pointer;
-					padding: rem(8);
+					padding: rem(8) 0;
 					span {
 						display: block;
 						background-color: $accent-color;
@@ -95,7 +119,7 @@
 					box-shadow: rem(0) rem(-5) rem(0) $highlight-color, rem(0) rem(5) rem(0) $highlight-color;
 
 					&:first-of-type {
-						transform: translateY(rem(11)) rotate(45deg);
+						transform: translateY(rem(8)) rotate(45deg);
 					}
 
 					&:nth-of-type(2) {
@@ -103,7 +127,7 @@
 					}
 
 					&:last-of-type {
-						transform: translateY(rem(-11)) rotate(-45deg);
+						transform: translateY(rem(-8)) rotate(-45deg);
 					}
 				}
 			}
@@ -123,8 +147,8 @@
 					position: absolute;
 					background-color: $primary-color;
 					width: rem(200);
-					top: rem(63);
-					height: calc(100dvh - rem(62));
+					top: $nav-header-height;
+					height: calc(100svh - $nav-header-height);
 					right: 0;
 					transform: translateX(100%);
 					border-left: $accent-color rem(2) solid;
@@ -135,6 +159,8 @@
 				}
 
 				a {
+					position: relative;
+
 					@include mobile {
 						width: 100%;
 						border-radius: 0;
@@ -155,6 +181,10 @@
 						@include mobile {
 							box-shadow: none;
 						}
+					}
+
+					&.active-link {
+						text-shadow: rem(2) rem(2) rem(1) $highlight-color;
 					}
 				}
 			}
