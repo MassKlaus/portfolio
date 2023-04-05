@@ -75,7 +75,8 @@
 					padding: rem(8);
 					span {
 						display: block;
-						background-color: $text-color;
+						background-color: $accent-color;
+						box-shadow: rem(-5) rem(4) rem(0) $highlight-color;
 						border-radius: rem(10);
 						width: rem(30);
 						height: rem(2);
@@ -91,6 +92,8 @@
 
 			.hamburger--open {
 				span {
+					box-shadow: rem(0) rem(-5) rem(0) $highlight-color, rem(0) rem(5) rem(0) $highlight-color;
+
 					&:first-of-type {
 						transform: translateY(rem(11)) rotate(45deg);
 					}
@@ -146,6 +149,7 @@
 					&:focus {
 						background-color: $primary-color-hover;
 						box-shadow: inset rem(0) rem(0) rem(2) $highlight-color;
+						text-shadow: rem(2) rem(2) rem(1) $highlight-color;
 
 						@include mobile {
 							box-shadow: none;

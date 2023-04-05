@@ -1,9 +1,47 @@
 <script lang="ts">
+	import { onInterval } from '../utils/timer';
+
+	const bannerTextOptions = ['Business', 'Reach', 'Network'];
+	const printTextInterval = 100;
+	const freezeDuration = 10;
+
+	let bannerTextIndex = 0;
+	let bannerTextToDisplay = bannerTextOptions[0];
+	let bannerText = '';
+	let forwardPrint = true;
+	let freezeFrameCount = 0;
+
+	function AnimateBannerText() {
+		if (bannerText.length === 0 && !forwardPrint) {
+			forwardPrint = true;
+			bannerTextIndex = ++bannerTextIndex % bannerTextOptions.length;
+			bannerTextToDisplay = bannerTextOptions[bannerTextIndex];
+			freezeFrameCount = 0;
+		}
+
+		if (bannerTextToDisplay.length === bannerText.length) {
+			if (freezeDuration >= freezeFrameCount) {
+				freezeFrameCount++;
+				return;
+			}
+
+			forwardPrint = false;
+		}
+
+		if (forwardPrint) {
+			bannerText += bannerTextToDisplay[bannerText.length];
+			return;
+		}
+
+		bannerText = bannerText.substring(0, bannerText.length - 1);
+	}
+	onInterval(AnimateBannerText, printTextInterval);
 </script>
 
 <div class="banner">
 	<div class="content">
-		<h2>Grow your [Dynamically Typed Text], Digitally</h2>
+		<h2>Grow your <span class="catchWord">{bannerText}</span>, Digitally!</h2>
+		<h4>A new audience a few clicks away</h4>
 	</div>
 </div>
 
@@ -33,21 +71,13 @@
 
 		.content {
 			z-index: 1;
-			.call-to-action {
-				display: inline-block;
-				background-color: #00707c;
-				color: #fff;
-				padding: 10px 20px;
-				border-radius: 5px;
-				font-size: 1.2rem;
-				margin-top: 20px;
-				text-decoration: none;
-				transition: all 0.3s ease-in-out;
-				cursor: pointer;
 
-				&:hover {
-					background-color: #005a64;
-				}
+			.catchWord {
+				color: $accent-color;
+				text-shadow: rem(2) rem(2) rem(1) $highlight-color;
+			}
+
+			.scroll-indicator {
 			}
 		}
 	}
