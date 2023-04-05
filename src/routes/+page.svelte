@@ -46,13 +46,14 @@
 	onInterval(blinkCursor, printCursorInterval);
 </script>
 
-<div class="banner">
+<div class="banner" id="home">
 	<div class="content">
 		<div class="text-banner">
 			<h3 class="title-text">
 				Grow your <span class="catchWord">{bannerText}!</span>
 			</h3>
 			<h4 class="subtitle-text">A new audience a few clicks away</h4>
+			<a class="call-to-action" href="#contact">Get in Touch</a>
 		</div>
 		<div class="banner-scroll-indicator">
 			<span />
@@ -67,7 +68,7 @@
 
 	.banner {
 		position: relative;
-		background-image: url(/images/hero_banner.jpg);
+		background-image: url(/images/banner-glitch.jpg);
 		background-size: cover;
 		background-position: center;
 		height: 100svh; /* Set the height of the banner */
@@ -76,6 +77,8 @@
 		align-items: center;
 		text-align: center;
 		color: #fff;
+
+		box-shadow: rem(0) rem(1) rem(5) $accent-color, rem(0) rem(2) rem(10) $highlight-color;
 
 		z-index: 0;
 
@@ -95,6 +98,10 @@
 			padding: 0 rem(10);
 
 			.text-banner {
+				display: flex;
+				flex-direction: column;
+
+				align-items: center;
 				.title-text {
 					font-size: rem(56);
 					margin-bottom: 0;
@@ -108,7 +115,24 @@
 				}
 
 				.subtitle-text {
-					font-size: rem(28);
+					font-size: rem(24);
+				}
+
+				.call-to-action {
+					display: inline-block;
+					font-size: rem(30);
+					padding: rem(5) rem(30);
+
+					margin: 30px;
+
+					border-radius: rem(1);
+
+					box-shadow: rem(5) rem(5) 0 $accent-color, rem(-5) rem(-5) 0 $highlight-color;		
+					text-shadow: rem(2) rem(2) $highlight-color;
+
+					color: $accent-color;
+					font-family: $heading-font;
+					font-weight: bold;
 				}
 			}
 
@@ -118,33 +142,33 @@
 				flex-direction: column;
 				align-items: center;
 
-				gap: rem(15);
+				gap: rem(18);
 
 				bottom: 0;
 				right: 50%;
 				transform: translateY(-50%) translateX(50%);
 
 				span {
-					$animation-execution-time: 2s;
+					$animation-execution-time: 1.5s;
 
 					position: relative;
 					width: var(--arrow-arm-length);
-					height: rem(4);
 
 					animation: bounce $animation-execution-time linear infinite;
 					animation-delay: var(--move-delay);
 
-					--arrow-arm-length: #{rem(15)};
+					$arrow-arm-length: rem(20);
+					--arrow-arm-length: #{$arrow-arm-length};
 					--arm-color: #{$accent-color};
 					--move-delay: #{math.div($animation-execution-time, 4)};
 
 					&:first-of-type {
-						--arrow-arm-length: #{rem(14)};
+						--arrow-arm-length: calc(#{$arrow-arm-length} * 0.85);
 						--move-delay: 0ms;
 					}
 
 					&:last-of-type {
-						--arrow-arm-length: #{rem(16)};
+						--arrow-arm-length: calc(#{$arrow-arm-length} * 1.15);
 						--move-delay: #{math.div($animation-execution-time, 2)};
 					}
 
