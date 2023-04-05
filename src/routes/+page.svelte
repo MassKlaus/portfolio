@@ -10,6 +10,7 @@
 	let bannerText = '';
 	let forwardPrint = true;
 	let freezeFrameCount = 0;
+	let blinkCursor = true;
 
 	function AnimateBannerText() {
 		if (bannerText.length === 0 && !forwardPrint) {
@@ -29,18 +30,22 @@
 		}
 
 		if (forwardPrint) {
-			bannerText += bannerTextToDisplay[bannerText.length];
-			return;
+			bannerText = bannerTextToDisplay.substring(0, bannerText.length + 1);
+		} else {
+			bannerText = bannerText.substring(0, bannerText.length - 1);
 		}
-
-		bannerText = bannerText.substring(0, bannerText.length - 1);
 	}
 	onInterval(AnimateBannerText, printTextInterval);
 </script>
 
 <div class="banner">
 	<div class="content">
-		<h2>Grow your <span class="catchWord">{bannerText}</span>, Digitally!</h2>
+		<div class="text-banner">
+			<h3 class="title">
+				Grow your
+				<span class="catchWord">{bannerText}</span>
+			</h3>
+		</div>
 		<h4>A new audience a few clicks away</h4>
 	</div>
 </div>
@@ -72,9 +77,19 @@
 		.content {
 			z-index: 1;
 
-			.catchWord {
-				color: $accent-color;
-				text-shadow: rem(2) rem(2) rem(1) $highlight-color;
+			padding: 0 rem(10);
+
+			.title {
+				display: flex;
+				justify-content: center;
+				.catchWord {
+					text-align: left;
+					margin-left: rem(8);
+					display: block;
+					color: $accent-color;
+					min-width: 7ch;
+					text-shadow: rem(2) rem(2) rem(1) $highlight-color;
+				}
 			}
 
 			.scroll-indicator {
