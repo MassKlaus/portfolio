@@ -63,6 +63,8 @@
 </div>
 
 <style lang="scss" scoped>
+	@use 'sass:math';
+
 	.banner {
 		position: relative;
 		background-image: url(/images/hero_banner.jpg);
@@ -134,7 +136,7 @@
 
 					--arrow-arm-length: #{rem(15)};
 					--arm-color: #{$accent-color};
-					--move-delay: #{$animation-execution-time/4};
+					--move-delay: #{math.div($animation-execution-time, 4)};
 
 					&:first-of-type {
 						--arrow-arm-length: #{rem(14)};
@@ -143,7 +145,7 @@
 
 					&:last-of-type {
 						--arrow-arm-length: #{rem(16)};
-						--move-delay: #{$animation-execution-time/2};
+						--move-delay: #{math.div($animation-execution-time, 2)};
 					}
 
 					@keyframes bounce {
