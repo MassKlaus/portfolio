@@ -79,21 +79,10 @@
 
 			padding: 0 rem(10);
 
-			.title {
-				display: flex;
-				justify-content: center;
 				.catchWord {
-					text-align: left;
-					margin-left: rem(8);
-					display: block;
 					color: $accent-color;
-					min-width: 7ch;
 					text-shadow: rem(2) rem(2) rem(1) $highlight-color;
 				}
-			}
-
-			.scroll-indicator {
-			}
 		}
 	}
 </style>
