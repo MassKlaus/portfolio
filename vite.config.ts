@@ -9,5 +9,8 @@ export default defineConfig({
 				additionalData: '@use "src/_variables.scss" as *;\n'
 			},
 		}
+	},
+	build: {
+		sourcemap: true,
 	}
 });
