@@ -19,6 +19,12 @@
 	}
 }
 
+@mixin mobile-tablet {
+	@media (max-width: #{$breakpoint-tablet}) {
+		@content;
+	}
+}
+
 @function rem($px, $base-font-size: 16) {
 	@return math.div($px, $base-font-size) * 1rem;
 }
@@ -55,8 +61,9 @@ $main-font: 'Poppins', 'Roboto', sans-serif;
 $heading-font: 'Montserrat', Arial, sans-serif;
 $subheading-font: 'Raleway', Helvetica, sans-serif;
 
+// Breakpoints for responsive design
 $breakpoint-mobile: rem(480);
-$breakpoint-tablet: rem(768);
-$breakpoint-desktop: rem(769);
+$breakpoint-tablet: rem(1024);
+
 
 $nav-header-height: rem(60);

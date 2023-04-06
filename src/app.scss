@@ -253,4 +253,17 @@ img {
 	.section-title {
 		text-shadow: rem(2) rem(2) 0 $highlight-color, rem(-2) rem(-2) 0 $accent-color;
 	}
+
+	.indent-section {
+		margin: 0 rem(40);
+
+		@include mobile-tablet {
+			margin: 0 rem(20);
+		}
+	}
+}
+
+.page-content {
+	max-width: rem(1280);
+	margin: 0 auto;	
 }
