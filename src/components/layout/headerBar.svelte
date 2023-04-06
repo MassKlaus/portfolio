@@ -80,9 +80,7 @@
 					height: $logo-tablet-width;
 				}
 
-				@include desktop {
-					height: $logo-desktop-width;
-				}
+				height: $logo-desktop-width;
 			}
 		}
 
