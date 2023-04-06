@@ -50,7 +50,7 @@
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				background: linear-gradient(to top, rgba(26, 26, 62, 0.9), transparent);
+				background: linear-gradient(to top, rgba(15, 15, 36, 0.9), rgba(15, 15, 36, 0.75), transparent);
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
@@ -59,7 +59,10 @@
 				transform: translateY(59%);
 				transition: all 0.5s ease;
 
-				//adding text-shadow to the h3 and p elements
+                @include mobile-tablet {
+                    transform: translateY(9%);
+                }				
+                //adding text-shadow to the h3 and p elements
 				h3 {
 					font-weight: bold;
 					margin: 0 0 0.5rem;
@@ -69,6 +72,7 @@
 				p {
 					font-family: Poppins, Roboto, sans-serif;
 					margin: 0;
+                    font-size: rem(16);
 					height: rem(80);
 					text-shadow: rem(2) rem(2) 0 $highlight-color;
 				}
