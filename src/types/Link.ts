@@ -1,6 +1,5 @@
-
 export interface Link {
-    text: string;
-    href: string;
-    active: boolean;
+	text: string;
+	href: string;
+	active: boolean;
 }

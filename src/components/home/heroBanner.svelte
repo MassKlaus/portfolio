@@ -50,7 +50,7 @@
 	<div class="content">
 		<div class="text-banner">
 			<h3 class="title-text">
-				Grow your <span class=" mixed-phase-text">{bannerText}!</span>
+				Grow your <span class="mixed-phase-text">{bannerText}!</span>
 			</h3>
 			<h4 class="subtitle-text">A new audience a few clicks away</h4>
 			<a class="call-to-action" href="#contact">Get in Touch</a>
@@ -105,13 +105,6 @@
 				.title-text {
 					font-size: rem(56);
 					margin-bottom: 0;
-					.catchWord {
-						display: inline-block;
-						min-width: 5ch;
-						text-align: left;
-						color: $secondary-color;
-						text-shadow: rem(2) rem(2) rem(1) $highlight-color;
-					}
 				}
 
 				.subtitle-text {

@@ -6,7 +6,7 @@
 </script>
 
 <!--open in new tab-->
-<a href="{link}" target="_blank" class="project-card">
+<a href={link} target="_blank" class="project-card">
 	<div class="card-image" style="background-image: url({image})">
 		<div class="gradient-overlay">
 			<h3>{title}</h3>

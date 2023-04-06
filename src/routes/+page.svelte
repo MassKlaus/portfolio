@@ -68,7 +68,11 @@
 			</p>
 		</div>
 		<blockquote>
-			<p>"Give a man a program, frustrate him for a day. Teach a man to program, frustrate him for a lifetime."</p> -- <i>Muhammad Waseem</i>
+			<p>
+				"Give a man a program, frustrate him for a day. Teach a man to program, frustrate him for a
+				lifetime."
+			</p>
+			--<i>Muhammad Waseem</i>
 		</blockquote>
 	</div>
 </section>
@@ -99,7 +103,6 @@
 
 		.info-wrapper {
 			max-width: 75ch;
-
 		}
 
 		blockquote {
@@ -111,7 +114,7 @@
 			color: var(--color-primary);
 
 			p {
-			width: 25ch;
+				width: 25ch;
 			}
 		}
 	}
