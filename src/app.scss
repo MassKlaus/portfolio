@@ -229,3 +229,28 @@ img {
 .hidden {
 	visibility: collapse;
 }
+
+.header-padding {
+	padding-top: $nav-header-height;
+}
+
+.mixed-phase-text {
+	text-shadow: rem(2) rem(2) 0 $highlight-color, rem(-2) rem(-2) 0 $accent-color;
+}
+
+.accent-phase-text {
+	text-shadow: rem(2) rem(2) 0 $accent-color;
+}
+
+.highlight-phase-text {
+	text-shadow: rem(2) rem(2) 0 $highlight-color;
+}
+
+.info-section {
+	padding: $nav-header-height rem(20);
+	padding-bottom: 0;
+
+	.section-title {
+		text-shadow: rem(2) rem(2) 0 $highlight-color, rem(-2) rem(-2) 0 $accent-color;
+	}
+}
