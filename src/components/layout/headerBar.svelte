@@ -1,10 +1,12 @@
 <script lang="ts">
+	import type { Link } from '../../types/Link';
+
 	let expandNav = false;
 
-	let links = [
+	let links: Link[] = [
 		{ text: 'Home', href: '#home', active: false },
-		{ text: 'About Me', href: '#about', active: false },
 		{ text: 'Projects', href: '#projects', active: false },
+		{ text: 'About', href: '#about', active: false },
 		{ text: 'Contact', href: '#contact', active: false }
 	];
 
@@ -13,8 +15,7 @@
 			const element = links[index];
 
 			console.log(`ACTIVATE: ${index === targetIndex} ${index}`);
-			
-			
+
 			element.active = index === targetIndex;
 		}
 
@@ -39,7 +40,9 @@
 
 		<nav class:show={expandNav}>
 			{#each links as link, i (i)}
-				<a href={link.href} class:active-link={link.active} on:click={() => activateLink(i)}> {link.text}</a>
+				<a href={link.href} class:active-link={link.active} on:click={() => activateLink(i)}>
+					{link.text}</a
+				>
 			{/each}
 		</nav>
 	</div>
@@ -50,12 +53,10 @@
 	$logo-tablet-width: rem(41);
 	$logo-desktop-width: rem(41);
 
-	$nav-header-height: rem(60);
 	.header-wrapper {
 		position: fixed;
 		width: 100%;
 		height: $nav-header-height;
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
