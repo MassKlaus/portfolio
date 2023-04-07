@@ -9,7 +9,7 @@
 	<div class="card-text">
 		<h4 class="title mixed-phase-text">{info.title}</h4>
 		<p class="level"><span class="accent-phase-text">Level:</span> {info.level}</p>
-		<p class="experience"><span class="highlight-phase-text">Experience:</span> {info.experienceInYears} Years</p>
+		<p class="experience"><span class="highlight-phase-text">Experience:</span> {info.experienceInYears} {info.experienceInYears > 1? 'years' : 'year'}</p>
 	</div>
 </div>
 
