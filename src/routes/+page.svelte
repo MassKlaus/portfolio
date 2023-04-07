@@ -30,7 +30,7 @@
 			link: 'https://github.com/MassKlaus/SkinFuryu_Cost_Manager'
 		},
 		{
-			title: 'This very Portfolio',
+			title: 'This Very Portfolio',
 			image: '/raw-images/portfolio.png',
 			description:
 				'The portfolio you are currently viewing, built with SvelteKit and Custom Scss, hosted on Cloudflare Pages',
