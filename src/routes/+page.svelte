@@ -225,14 +225,6 @@
 	</section>
 </div>
 
-<section class="footer">
-	<h3>
-		Developed by <span class="mixed-phase-text">Massine Mouha</span> with
-		<span class="mixed-phase-text">Svelte Kit</span>
-	</h3>
-	<h5 class="mixed-phase-text">Copyright © {new Date().getFullYear()}</h5>
-</section>
-
 <style lang="scss">
 	.projects {
 		display: grid;
@@ -378,19 +370,5 @@
 		}
 	}
 
-	.footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: $primary-color-clicked;
-		color: $text-color;
-		margin-top: rem(100);
-		font-size: rem(16);
 
-		border-top: rem(2) solid $highlight-color;
-
-		padding: rem(30);
-		padding-bottom: rem(10);
-	}
 </style>
