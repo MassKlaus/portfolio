@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"postcss-preset-env": "^8.3.0"
+		"postcss-preset-env": "^8.3.0",
+		"vite-tsconfig-paths": "^4.0.8"
 	}
 }

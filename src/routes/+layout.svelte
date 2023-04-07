@@ -1,6 +1,6 @@
 <script>
-	import '../app.scss';
-	import HeaderBar from '../components/layout/headerBar.svelte';
+	import '$/app.scss';
+	import HeaderBar from '$components/layout/headerBar.svelte';
 </script>
 
 <HeaderBar />

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onInterval } from '../../utils/timer';
+	import { onInterval } from '$utils/timer';
 
 	const bannerTextOptions = ['Business', 'Reach', 'Network', 'Influence'];
 	const printTextInterval = 100;
@@ -49,9 +49,9 @@
 <section class="banner" id="home">
 	<div class="content">
 		<div class="text-banner">
-			<h3 class="title-text">
+			<h1 class="title-text">
 				Grow your <span class="mixed-phase-text">{bannerText}!</span>
-			</h3>
+			</h1>
 			<h4 class="subtitle-text">A new audience a few clicks away</h4>
 			<a class="call-to-action" href="#contact">Get in Touch</a>
 		</div>

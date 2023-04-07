@@ -247,11 +247,15 @@ img {
 }
 
 .info-section {
-	padding: $nav-header-height rem(20);
+	padding: calc(#{$nav-header-height} + #{rem(5)}) rem(20);
 	padding-bottom: 0;
 
 	.section-title {
 		text-shadow: rem(2) rem(2) 0 $highlight-color, rem(-2) rem(-2) 0 $accent-color;
+	}
+
+	.section-subtitle {
+		margin: rem(30) 0;
 	}
 
 	.indent-section {

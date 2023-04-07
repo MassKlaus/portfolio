@@ -97,11 +97,6 @@
 - Brief descriptions of roles and responsibilities
 - Key achievements or accomplishments
 
-### Education
-
-- List of degrees, certifications, or courses
-- Institution names and dates attended
-
 ### Contact
 
 - Contact form for visitors to reach out

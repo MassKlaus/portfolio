@@ -15,7 +15,7 @@
 	</div>
 </a>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.project-card {
 		position: relative;
 		width: 100%;

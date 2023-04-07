@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Link } from '../../types/Link';
+	import type { Link } from "$types/Link";
 
 	let expandNav = false;
 
