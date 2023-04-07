@@ -204,17 +204,17 @@
 		<h2 class="section-title">Contact Me</h2>
 
 		<div class="contact-methods">
-			<form class="contact-form" method="post">
+			<form action="https://formsubmit.co/c82504ada8a9c9aca54ec8fa412236e9" class="contact-form" method="post">
 				<h3 class="section-subtitle accent-phase-text" style="margin: 0;">Send a message!</h3>
 
 				<label for="name">Name</label>
-				<input name="name" id="name" />
+				<input type="text" name="name" id="name" />
 
 				<label for="name">Email</label>
-				<input name="email" id="email" />
+				<input type="email" name="email" id="email" />
 
 				<label for="name">Subject</label>
-				<input name="subject" id="subject" />
+				<input type="text" name="subject" id="subject" />
 
 				<label for="name">Message</label>
 				<textarea name="message" id="message" />
@@ -329,6 +329,7 @@
 
 				input,
 				textarea {
+					font-family: $main-font;
 					padding: rem(10);
 					border-radius: rem(5);
 					background-color: $primary-color;
