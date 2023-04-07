@@ -222,7 +222,7 @@
 
 <section class="footer">
 	<h3>Developed by <span class="mixed-phase-text">Massine Mouha</span> with <span class="mixed-phase-text">Svelte Kit</span></h3>
-	<h3 class="mixed-phase-text">Copyright © {new Date().getFullYear()}</h3>
+	<h5 class="mixed-phase-text">Copyright © {new Date().getFullYear()}</h5>
 </section>
 
 <style lang="scss">
