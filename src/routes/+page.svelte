@@ -28,6 +28,13 @@
 			description:
 				'Soap recipe manager and ingredient classing tool with pdf export and costing calculation',
 			link: 'https://github.com/MassKlaus/SkinFuryu_Cost_Manager'
+		},
+		{
+			title: 'This very Portfolio',
+			image: '/raw-images/portfolio.png',
+			description:
+				'The portfolio you are currently viewing, built with SvelteKit and Custom Scss, hosted on Cloudflare Pages',
+			link: 'https://portfolio-120.pages.dev/'
 		}
 	];
 
@@ -193,7 +200,6 @@
 		</div>
 	</section>
 
-	
 	<section class="info-section contact-section" id="contact">
 		<h2 class="section-title">Contact Me</h2>
 
@@ -217,11 +223,13 @@
 			</form>
 		</div>
 	</section>
-
 </div>
 
 <section class="footer">
-	<h3>Developed by <span class="mixed-phase-text">Massine Mouha</span> with <span class="mixed-phase-text">Svelte Kit</span></h3>
+	<h3>
+		Developed by <span class="mixed-phase-text">Massine Mouha</span> with
+		<span class="mixed-phase-text">Svelte Kit</span>
+	</h3>
 	<h5 class="mixed-phase-text">Copyright © {new Date().getFullYear()}</h5>
 </section>
 
