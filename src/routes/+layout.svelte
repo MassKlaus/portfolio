@@ -14,6 +14,7 @@
 		Developed by <span class="mixed-phase-text">Massine Mouha</span> with
 		<span class="mixed-phase-text">Svelte Kit</span>
 	</h3>
+	<h5>Logos Acquired from <a class="highlight-phase-text" href="https://www.svgrepo.com/">Svg Repo</a> and <a class="highlight-phase-text" href="https://www.vectorlogo.zone">Vector Logo</a></h5>
 	<h5 class="mixed-phase-text">Copyright © {new Date().getFullYear()}</h5>
 </section>
 
