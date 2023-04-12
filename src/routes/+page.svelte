@@ -35,6 +35,13 @@
 			description:
 				'The portfolio you are currently viewing, built with SvelteKit and Custom Scss, hosted on Cloudflare Pages',
 			link: 'https://portfolio-120.pages.dev/'
+		},
+		{
+			title: 'Jlox',
+			image: '/raw-images/Jlox.png',
+			description:
+				'A toy interpreted language, this is an implementation of the Lox language from the book Crafting Interpreters',
+			link: 'https://github.com/MassKlaus/jlox-metty'
 		}
 	];
 

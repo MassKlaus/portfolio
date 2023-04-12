@@ -9,7 +9,11 @@
 	<div class="card-text">
 		<h4 class="title mixed-phase-text">{info.title}</h4>
 		<p class="level"><span class="accent-phase-text">Level:</span> {info.level}</p>
-		<p class="experience"><span class="highlight-phase-text">Experience:</span> {info.experienceInYears} {info.experienceInYears > 1? 'years' : 'year'}</p>
+		<p class="experience">
+			<span class="highlight-phase-text">Experience:</span>
+			{info.experienceInYears}
+			{info.experienceInYears > 1 ? 'years' : 'year'}
+		</p>
 	</div>
 </div>
 
@@ -65,7 +69,7 @@
 			.level {
 				padding: rem(0) rem(10);
 				padding-top: rem(5);
-				grid-column:  1;
+				grid-column: 1;
 				border-right: $highlight-color rem(1) solid;
 			}
 		}
