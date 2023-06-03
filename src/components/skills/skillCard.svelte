@@ -8,7 +8,7 @@
 	<img src={info.image} alt="{info.title} logo" />
 	<div class="card-text">
 		<h4 class="title highlight-phase-text">{info.title}</h4>
-		<p class="level"><span class="accent-phase-text">Level:</span> {info.level}</p>
+		<p class="level"><span class="highlight-phase-text">Level:</span> {info.level}</p>
 		<p class="experience">
 			<span class="highlight-phase-text">Experience:</span>
 			{info.experienceInYears}
